@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Type from './views/type/type';
 import Condition from './views/condition/condition';
@@ -9,21 +9,86 @@ import Contact from './views/contact/contact';
 import Rundown from './views/rundown/rundown';
 
 function App() {
+  const [page, setPage] = useState(1);
+  const [type, setType] = useState(null);
+  const [condition, setCondition] = useState(null);
+  const [value, setValue] = useState(null);
+  const [timeline, setTimeline] = useState(null);
+  const [address, setAddress] = useState(null);
+  const [zip, setZip] = useState(null);
+  const [name, setName] = useState(null);
+  const [phone, setPhone] = useState(null);
+  const [email, setEmail] = useState(null);
+
+  useEffect(() => {
+
+  }, [])
+
   switch (page) {
     case(1):
-      return <Type />
+      return <Type
+              page={page}
+              setPage={setPage}
+              type={type}
+              setType={setType} />
     case(2):
-      return <Condition />
+      return <Condition
+              page={page}
+              setPage={setPage}
+              condition={condition}
+              setCondition={setCondition} />
     case(3):
-      return <Value />
+      return <Value
+              page={page}
+              setPage={setPage}
+              value={value}
+              setValue={setValue} />
     case(4):
-      return <Timeline />
+      return <Timeline
+              page={page}
+              setPage={setPage}
+              timeline={timeline}
+              setTimeline={setTimeline} />
     case(5):
-      return <Address />
+      return <Address
+              page={page}
+              setPage={setPage}
+              address={address}
+              setAddress={setAddress}
+              zip={zip}
+              setZip={setZip} />
     case(6):
-      return <Contact />
+      return <Contact
+              page={page}
+              setPage={setPage}
+              name={name}
+              setName={setName}
+              phone={phone}
+              setPhone={setPhone}
+              email={email}
+              setEmail={setEmail} />
     case(7):
-      return <Rundown />
+      return <Rundown
+              page={page}
+              setPage={setPage}
+              type={type}
+              setType={setType}
+              condition={condition}
+              setCondition={setCondition}
+              value={value}
+              setValue={setValue}
+              timeline={timeline}
+              setTimeline={setTimeline}
+              address={address}
+              setAddress={setAddress}
+              zip={zip}
+              setZip={setZip}
+              name={name}
+              setName={setName}
+              phone={phone}
+              setPhone={setPhone}
+              email={email}
+              setEmail={setEmail} />
 }
 
 export default App;
