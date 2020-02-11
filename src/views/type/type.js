@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../../components/header/header';
 import { TypeWrap } from './typeStyles';
+import { Content } from '../../globalStyles';
 
 function Type(props) {
     return (
@@ -26,6 +27,15 @@ function Type(props) {
                 setPhone={props.setPhone}
                 email={props.email}
                 setEmail={props.setEmail} />
+
+            <Content>
+                <h1>
+                    <span>1.</span>
+                    What type of property<br/> 
+                    are you interested<br/>
+                    in selling?
+                </h1>
+            </Content>
         </TypeWrap>
     )
 }
