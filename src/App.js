@@ -20,9 +20,9 @@ function App() {
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [])
+  // }, [])
 
   switch (page) {
     case(1):
@@ -89,6 +89,7 @@ function App() {
               setPhone={setPhone}
               email={email}
               setEmail={setEmail} />
+  }
 }
 
 export default App;
