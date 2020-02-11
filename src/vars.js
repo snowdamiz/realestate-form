@@ -1,11 +1,11 @@
 export const fonts = {
-    primary: '',
-    secondary: '',
+    primary: ``,
+    secondary: ``,
 }
 
 export const colors = {
-    primary: ``,
-    secondary: ``,
+    primary: '#E05B50',
+    secondary: '#BA4C43',
 }
 
 export const media = {
