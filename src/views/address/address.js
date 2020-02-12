@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import { AddressWrap } from './addressStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Address(props) {
-    const NextStep = () => props.setPage(props.page + 1);
+    const [addressError, setAddressError] = useState(null);
+
+    const NextStep = () => {
+        const regexAddress = /^[a-zA-Z0-9 ]*$/;
+        const regexNumber = /^\d+$/;
+
+        const address = props.address;
+        const zip = props.zip; 
+
+        if (
+            address.length < 6 ||
+            !regexAddress.test(address) ||
+            zip.length != 5 ||
+            !regexNumber.test(zip)
+            ) {
+            setAddressError("Please Enter a Valid Address and Zip Code");
+        } else {
+            setAddressError(null);
+            props.setPage(6);
+        }
+    };
+
     const PrevStep = () => props.setPage(props.page - 1);
     
     const setAddress = (e) => props.setAddress(e.target.value)
@@ -42,6 +63,7 @@ function Address(props) {
                     what is the address or<br />
                     your property?
                 </h1>
+                {addressError ? <div className="error">{addressError}</div>: null }
                 <Input
                     placeholder="Address"
                     onChange={setAddress}/>

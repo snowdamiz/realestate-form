@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import { TypeWrap } from './typeStyles';
@@ -6,7 +6,16 @@ import { Content, Button } from '../../globalStyles';
 import Checkmark from '../../assets/checkmark.svg';
 
 function Type(props) {
-    const NextStep = () => props.setPage(props.page + 1);
+    const [typeError, setTypeError] = useState(null);
+
+    const NextStep = () => {
+        if (props.type) {
+            props.setPage(props.page + 1);
+        } else {
+            setTypeError("Please Make a Selection");
+        }
+    };
+
     const PrevStep = () => props.setPage(props.page - 1);
 
     const setType1 = () => props.setType(1);
@@ -45,6 +54,7 @@ function Type(props) {
                     are you interested<br/>
                     in selling?
                 </h1>
+                {typeError ? <div className="error">{typeError}</div> : null}
                 <Button 
                     value="1"
                     className={props.type === 1 ? 'btn-active' : 'btn-inactive'}

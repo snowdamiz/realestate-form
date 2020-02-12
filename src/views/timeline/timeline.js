@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import { TimelineWrap } from './timelineStyles';
@@ -6,7 +6,16 @@ import { Content, Button } from '../../globalStyles';
 import Checkmark from '../../assets/checkmark.svg';
 
 function Timeline(props) {
-    const NextStep = () => props.setPage(props.page + 1);
+    const [timelineError, setTimelineError] = useState(null);
+
+    const NextStep = () => {
+        if (props.timeline) {
+            props.setPage(props.page + 1);
+        } else {
+            setTimelineError("Please Make a Selection");
+        }
+    };
+
     const PrevStep = () => props.setPage(props.page - 1);
 
     const setTimeline1 = () => props.setTimeline(1);
@@ -45,6 +54,7 @@ function Timeline(props) {
                     to sell your property<br />
                     for cash?
                 </h1>
+                {timelineError ? <div className="error">{timelineError}</div> : null}
                 <Button
                     className={props.timeline === 1 ? 'btn-active' : 'btn-inactive'}
                     onClick={setTimeline1}>

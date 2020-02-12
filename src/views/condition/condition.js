@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import { ConditionWrap } from './conditionStyles';
@@ -6,7 +6,16 @@ import { Content, Button } from '../../globalStyles';
 import Checkmark from '../../assets/checkmark.svg';
 
 function Condition(props) {
-    const NextStep = () => props.setPage(props.page + 1);
+    const [conditionError, setConditionError] = useState(null);
+
+    const NextStep = () => {
+        if (props.condition) {
+            props.setPage(props.page + 1);
+        } else {
+            setConditionError("Please Make a Selection");
+        }
+    };
+
     const PrevStep = () => props.setPage(props.page - 1);
 
     const setCondition1 = () => props.setCondition(1);
@@ -44,6 +53,7 @@ function Condition(props) {
                     What is the condition<br/> 
                     of the property?
                 </h1>
+                {conditionError ? <div className="error">{conditionError}</div> : null}
                 <Button 
                     className={props.type === 1 ? 'btn-active' : 'btn-inactive'}
                     onClick={setCondition1}>

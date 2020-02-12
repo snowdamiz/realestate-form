@@ -144,6 +144,13 @@ export const Content = styled.section`
             cursor: pointer;
         }
     }
+
+    .error {
+        font-family: ${fonts.primary};
+        font-size: 14px;
+        font-weight: 700;
+        color: red;
+    }
 `;
 
 export const Button = styled.button`

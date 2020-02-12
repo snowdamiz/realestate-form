@@ -14,8 +14,8 @@ function App() {
   const [condition, setCondition] = useState(null);
   const [value, setValue] = useState(null);
   const [timeline, setTimeline] = useState(null);
-  const [address, setAddress] = useState(null);
-  const [zip, setZip] = useState(null);
+  const [address, setAddress] = useState("");
+  const [zip, setZip] = useState("");
   const [name, setName] = useState(null);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
