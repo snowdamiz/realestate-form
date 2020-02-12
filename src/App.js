@@ -9,7 +9,7 @@ import Contact from './views/contact/contact';
 import Rundown from './views/rundown/rundown';
 
 function App() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(6);
   const [type, setType] = useState(null);
   const [condition, setCondition] = useState(null);
   const [value, setValue] = useState(null);

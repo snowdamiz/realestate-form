@@ -9,6 +9,11 @@ function Timeline(props) {
     const NextStep = () => props.setPage(props.page + 1);
     const PrevStep = () => props.setPage(props.page - 1);
 
+    const setTimeline1 = () => props.setTimeline(1);
+    const setTimeline2 = () => props.setTimeline(2);
+    const setTimeline3 = () => props.setTimeline(3);
+    const setTimeline4 = () => props.setTimeline(4);
+
     return (
         <TimelineWrap>
             <Header 
@@ -40,26 +45,34 @@ function Timeline(props) {
                     to sell your property<br />
                     for cash?
                 </h1>
-                <Button className={props.type === 1 ? 'btn-active' : 'btn-inactive'}>
-                    {props.type === 1 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 1 ? 'radio-active' : 'radio-inactive'}></div>
-                    <h3 className={props.type === 1 ? 'text-active' : 'text-inactive'}>5 Business Days</h3>
+                <Button
+                    className={props.timeline === 1 ? 'btn-active' : 'btn-inactive'}
+                    onClick={setTimeline1}>
+                    {props.timeline === 1 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 1 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.timeline === 1 ? 'text-active' : 'text-inactive'}>5 Business Days</h3>
                 </Button>
 
-                <Button className={props.type === 2 ? 'btn-active' : 'btn-inactive'}>
-                    {props.type === 2 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 2 ? 'radio-active' : 'radio-inactive'}></div>
-                    <h3 className={props.type === 2 ? 'text-active' : 'text-inactive'}>10 Business Days</h3>
+                <Button
+                    className={props.timeline === 2 ? 'btn-active' : 'btn-inactive'}
+                    onClick={setTimeline2}>
+                    {props.timeline === 2 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 2 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.timeline === 2 ? 'text-active' : 'text-inactive'}>10 Business Days</h3>
                 </Button>
-                <Button className={props.type === 3 ? 'btn-active' : 'btn-inactive'}>
-                    {props.type === 3 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 3 ? 'radio-active' : 'radio-inactive'}></div>
-                    <h3 className={props.type === 3 ? 'text-active' : 'text-inactive'}>15 Business Days</h3>
+                <Button
+                    className={props.timeline === 3 ? 'btn-active' : 'btn-inactive'}
+                    onClick={setTimeline3}>
+                    {props.timeline === 3 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 3 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.timeline === 3 ? 'text-active' : 'text-inactive'}>15 Business Days</h3>
                 </Button>
-                <Button className={props.type === 4 ? 'btn-active' : 'btn-inactive'}>
-                    {props.type === 4 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
-                    <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>20 Business Days</h3>
+                <Button 
+                    className={props.timeline === 4 ? 'btn-active' : 'btn-inactive'}
+                    onClick={setTimeline4}>
+                    {props.timeline === 4 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 4 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.timeline === 4 ? 'text-active' : 'text-inactive'}>20 Business Days</h3>
                 </Button>
                 <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />

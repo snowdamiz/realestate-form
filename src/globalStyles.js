@@ -52,8 +52,14 @@ export const Content = styled.section`
     }
 
     .btn-inactive {
+        &:focus {
+            background: transparent;
+        }
+        &:active {
+            background: transparent;
+        }
         width: 225px;
-        height: 50px;
+        height: 60px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
         border-radius: 10px;
@@ -63,11 +69,12 @@ export const Content = styled.section`
         justify-content: flex-start;
         align-items: center;
         cursor: pointer;
+        border: 2px solid ${colors.white};
     }
 
     .btn-active {
         width: 225px;
-        height: 50px;
+        height: 60px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
         border-radius: 10px;
@@ -77,6 +84,7 @@ export const Content = styled.section`
         justify-content: flex-start;
         align-items: center;
         cursor: pointer;
+        border: 2px solid transparent;
     }
 
     .nextStep {
@@ -109,7 +117,7 @@ export const Content = styled.section`
     }
 `;
 
-export const Button = styled.div`
+export const Button = styled.button`
     img {
         width: 56px;
         height: 56px;

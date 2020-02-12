@@ -8,6 +8,9 @@ function Address(props) {
     const NextStep = () => props.setPage(props.page + 1);
     const PrevStep = () => props.setPage(props.page - 1);
     
+    const setAddress = (e) => props.setAddress(e.target.value)
+    const setZip = (e) => props.setZip(e.target.value);
+
     return (
         <AddressWrap>
             <Header 
@@ -39,8 +42,12 @@ function Address(props) {
                     what is the address or<br />
                     your property?
                 </h1>
-                <Input type="text" placeholder="Address" />
-                <Input type="text" placeholder="Zip Code" />
+                <Input
+                    placeholder="Address"
+                    onChange={setAddress}/>
+                <Input
+                    placeholder="Zip Code"
+                    onChange={setZip} />
                 <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
                 <button className="prevStep" onClick={PrevStep}>Go Back</button>
