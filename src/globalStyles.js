@@ -4,7 +4,7 @@ import { fonts, colors, media } from './vars';
 export const Content = styled.section`
     width: 100%;
     // border: 1px solid blue;
-    margin-top: -50px;
+    margin-top: -30px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -58,7 +58,7 @@ export const Content = styled.section`
         &:active {
             background: transparent;
         }
-        width: 225px;
+        width: 235px;
         height: 60px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -73,7 +73,7 @@ export const Content = styled.section`
     }
 
     .btn-active {
-        width: 225px;
+        width: 235px;
         height: 60px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -114,6 +114,32 @@ export const Content = styled.section`
         position: absolute;
         bottom: 30px;
         cursor: pointer;
+    }
+
+    div {
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            font-family: ${fonts.primary};
+            color: ${colors.shadow};
+            font-size: 16px;
+            
+
+            span {
+                color: ${colors.black};
+                font-size: 18px;
+                font-weight: 600;
+            }
+        }
+
+        img {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+        }
     }
 `;
 

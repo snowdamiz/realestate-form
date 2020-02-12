@@ -80,7 +80,6 @@ function Type(props) {
                 </Button>
                 <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
-                <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>
         </TypeWrap>
     )
