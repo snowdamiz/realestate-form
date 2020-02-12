@@ -5,9 +5,8 @@ import { ContactWrap } from './contactStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Contact(props) {
-    const NextStep = () => {
-        props.setPage(props.page + 1);
-    }
+    const NextStep = () => props.setPage(props.page + 1);
+    const PrevStep = () => props.setPage(props.page - 1);
     
     return (
         <ContactWrap>
@@ -41,8 +40,9 @@ function Contact(props) {
                 <Input type="text" placeholder="Name" />
                 <Input type="text" placeholder="Phone" />
                 <Input type="text" placeholder="Email" />
-                <button onClick={NextStep}>NEXT</button>
+                <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
+                <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>
         </ContactWrap>
     )

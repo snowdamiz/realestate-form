@@ -79,7 +79,7 @@ export const Content = styled.section`
         cursor: pointer;
     }
 
-    button {
+    .nextStep {
         background-color: ${colors.white};
         border: none;
         color: ${colors.primary};
@@ -96,6 +96,16 @@ export const Content = styled.section`
         ${media.largeTablet} {
             font-size: 26px;
         }
+    }
+
+    .prevStep {
+        border: none;
+        color: ${colors.shadow};
+        font-family: ${fonts.primary};
+        background-color: transparent;
+        position: absolute;
+        bottom: 30px;
+        cursor: pointer;
     }
 `;
 

@@ -5,9 +5,8 @@ import { AddressWrap } from './addressStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Address(props) {
-    const NextStep = () => {
-        props.setPage(props.page + 1);
-    }
+    const NextStep = () => props.setPage(props.page + 1);
+    const PrevStep = () => props.setPage(props.page - 1);
     
     return (
         <AddressWrap>
@@ -42,8 +41,9 @@ function Address(props) {
                 </h1>
                 <Input type="text" placeholder="Address" />
                 <Input type="text" placeholder="Zip Code" />
-                <button onClick={NextStep}>NEXT</button>
+                <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
+                <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>
         </AddressWrap>
     )

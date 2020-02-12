@@ -6,9 +6,8 @@ import { Content, Button } from '../../globalStyles';
 import Checkmark from '../../assets/checkmark.svg';
 
 function Timeline(props) {
-    const NextStep = () => {
-        props.setPage(props.page + 1);
-    }
+    const NextStep = () => props.setPage(props.page + 1);
+    const PrevStep = () => props.setPage(props.page - 1);
 
     return (
         <TimelineWrap>
@@ -62,8 +61,9 @@ function Timeline(props) {
                     <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
                     <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>20 Business Days</h3>
                 </Button>
-                <button onClick={NextStep}>NEXT</button>
+                <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
+                <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>
         </TimelineWrap>
     )

@@ -5,9 +5,8 @@ import { ValueWrap } from './valueStyles';
 import { Content } from '../../globalStyles';
 
 function Value(props) {
-    const NextStep = () => {
-        props.setPage(props.page + 1);
-    }
+    const NextStep = () => props.setPage(props.page + 1);
+    const PrevStep = () => props.setPage(props.page - 1);
     
     return (
         <ValueWrap>
@@ -40,8 +39,9 @@ function Value(props) {
                     is the fair value of<br />
                     the property?
                 </h1>
-                <button onClick={NextStep}>NEXT</button>
+                <button className="nextStep" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
+                <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>
         </ValueWrap>
     )
