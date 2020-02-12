@@ -73,6 +73,7 @@ export const Content = styled.section`
     .rangeslider__fill {
         background-color: #fff;
         border: 1px solid ${colors.shadow};
+        width: 320px;
     }
 
     .rangeslider__handle {
