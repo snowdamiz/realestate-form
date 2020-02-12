@@ -7,7 +7,7 @@ export const ProgressBarWrap = styled.section`
     border-radius: 4px;
     background-color: ${colors.primary};
     border: 1px solid ${colors.primary};
-    position: fixed;
+    position: absolute;
     bottom: 60px;
 
     .circle1 {
