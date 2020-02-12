@@ -93,7 +93,7 @@ export const Content = styled.section`
         &:active {
             background: transparent;
         }
-        width: 230px;
+        width: 240px;
         height: 54px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -108,7 +108,7 @@ export const Content = styled.section`
     }
 
     .btn-active {
-        width: 230px;
+        width: 240px;
         height: 54px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
