@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../../components/header/header';
 import { TypeWrap } from './typeStyles';
-import { Content } from '../../globalStyles';
+import { Content, Button } from '../../globalStyles';
+import Checkmark from '../../assets/checkmark.svg';
 
 function Type(props) {
     return (
@@ -35,6 +36,27 @@ function Type(props) {
                     are you interested<br/>
                     in selling?
                 </h1>
+                <Button className={props.type === 1 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 1 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 1 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 1 ? 'text-active' : 'text-inactive'}>Single Family</h3>
+                </Button>
+
+                <Button className={props.type === 2 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 2 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 2 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 2 ? 'text-active' : 'text-inactive'}>Multi Family</h3>
+                </Button>
+                <Button className={props.type === 3 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 3 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 3 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 3 ? 'text-active' : 'text-inactive'}>Lot or Land</h3>
+                </Button>
+                <Button className={props.type === 4 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 4 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Commercial</h3>
+                </Button>
             </Content>
         </TypeWrap>
     )

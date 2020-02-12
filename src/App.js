@@ -10,7 +10,7 @@ import Rundown from './views/rundown/rundown';
 
 function App() {
   const [page, setPage] = useState(1);
-  const [type, setType] = useState(null);
+  const [type, setType] = useState(1);
   const [condition, setCondition] = useState(null);
   const [value, setValue] = useState(null);
   const [timeline, setTimeline] = useState(null);
