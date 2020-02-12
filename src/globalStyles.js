@@ -87,12 +87,6 @@ export const Content = styled.section`
     }
 
     .btn-inactive {
-        &:focus {
-            background: transparent;
-        }
-        &:active {
-            background: transparent;
-        }
         width: 240px;
         height: 54px;
         background-color: ${colors.white};
@@ -227,7 +221,7 @@ export const Content = styled.section`
     }
 `;
 
-export const Button = styled.button`
+export const Button = styled.div`
     img {
         width: 56px;
         height: 56px;
@@ -245,7 +239,7 @@ export const Button = styled.button`
         border-radius: 50%;
         border: 1px solid ${colors.shadow};
         margin-left: 20px;
-        margin-top: -4px;
+        margin-top: 0px;
         background-color: ${colors.white};
     }
 
@@ -255,7 +249,7 @@ export const Button = styled.button`
         border-radius: 50%;
         border: 1px solid ${colors.white};
         margin-left: 20px;
-        margin-top: -4px;
+        margin-top: 0px;
         background-color: ${colors.white};
     }
 
@@ -265,7 +259,7 @@ export const Button = styled.button`
         font-weight: 400;
         font-size: 18px;
         margin-left: 22px;
-        margin-top: 13px;
+        margin-top: 19px;
     }
 
     .text-active {
@@ -274,7 +268,7 @@ export const Button = styled.button`
         font-weight: 400;
         font-size: 18px;
         margin-left: 22px;
-        margin-top: 13px;
+        margin-top: 19px;
     }
 `;
 
