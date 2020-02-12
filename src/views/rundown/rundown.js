@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Axios from 'axios';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import EditBtn from '../../assets/edit.svg';
@@ -51,6 +52,22 @@ function Rundown(props) {
     const editPhone = () => props.setPage(6);
     const editEmail = () => props.setPage(6);
 
+    const submit = (props) => {
+        let dataSubmitted = {
+            type: type,
+            condition: condition,
+            value: props.value,
+            timeline: timeline,
+            address: props.address,
+            zip: props.zip,
+            name: props.name,
+            phone: props.phone,
+            email: props.email
+        };
+
+        Axios.post("", dataSubmitted);
+    }
+
     return (
         <RundownWrap>
             <Header 
@@ -78,8 +95,10 @@ function Rundown(props) {
             <Content>
                 <h1>
                     <span>6.</span>
-                    Here are your Selections
+                    Varify Your Selections
                 </h1>
+
+                <button className="submitBtn" onClick={submit}>SUBMIT</button>
 
                 <div className="detailsBox"> 
                     <p><span>Property Type</span><br />{type}</p>

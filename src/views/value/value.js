@@ -1,13 +1,24 @@
 import React from 'react';
+import Slider from 'react-rangeslider'
+import 'react-rangeslider/lib/index.css'
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import { ValueWrap } from './valueStyles';
 import { Content } from '../../globalStyles';
 
+
 function Value(props) {
     const NextStep = () => props.setPage(props.page + 1);
     const PrevStep = () => props.setPage(props.page - 1);
-    
+
+    const handleChange = (value) => {
+        props.setValue(value);
+    }
+
+    const handleInputChange = (e) => {
+        props.setValue(e.target.value);
+    }
+
     return (
         <ValueWrap>
             <Header 
@@ -39,7 +50,16 @@ function Value(props) {
                     is the fair value of<br />
                     the property?
                 </h1>
-                <button className="nextStep" onClick={NextStep}>NEXT</button>
+                <div className='slider'>
+                    <Slider
+                        min={100000}
+                        max={1000000}
+                        value={props.value}
+                        stop={5000}
+                        onChange={handleChange} />
+                    <input value={props.value} className='value' onChange={handleInputChange} />
+                </div>
+                <button className="nextStepValue" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
                 <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>

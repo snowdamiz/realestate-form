@@ -9,6 +9,7 @@ export const Content = styled.section`
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
+    margin-bottom: 40px;
 
     ${media.tablet} {
         margin-top: -80px;
@@ -48,6 +49,39 @@ export const Content = styled.section`
         span {
             font-size: 36px;
             color: ${colors.primary};
+        }
+    }
+
+    .slider {
+        margin: 0px auto;
+        .value {
+            position: absolute;
+            margin: 0px auto;
+            margin-left: 100px;
+            text-align: center;
+            font-family: ${fonts.primary};
+            color: ${colors.dark};
+            font-weight: 500;
+            font-size: 16px;
+            border: 1px solid ${colors.shadow};
+            border-radius: 5px;
+            width: 120px;
+            padding: 10px 0;
+        }
+    }
+
+    .rangeslider__fill {
+        background-color: #fff;
+        border: 1px solid ${colors.shadow};
+    }
+
+    .rangeslider__handle {
+        background-color: ${colors.primary};
+        border: 1px solid transparent;
+
+        &::after {
+            background-color: ${colors.primary};
+            box-shadow: none;
         }
     }
 
@@ -106,6 +140,25 @@ export const Content = styled.section`
         }
     }
 
+    .nextStepValue {
+        background-color: ${colors.white};
+        border: none;
+        color: ${colors.primary};
+        font-family: ${fonts.primary};
+        font-weight: 700;
+        font-size: 22px;
+        margin-top: 60px;
+        cursor: pointer;
+
+        ${media.tablet} {
+            font-size: 24px;
+        }
+
+        ${media.largeTablet} {
+            font-size: 26px;
+        }
+    }
+
     .prevStep {
         border: none;
         color: ${colors.shadow};
@@ -124,6 +177,7 @@ export const Content = styled.section`
         background-color: #efefef;
         margin-bottom: 8px;
         padding: 0 10px 0 10px;
+        border-radius: 5px;
 
         p {
             font-family: ${fonts.primary};
@@ -150,6 +204,25 @@ export const Content = styled.section`
         font-size: 14px;
         font-weight: 700;
         color: red;
+    }
+
+    .submitBtn {
+        width: 160px;
+        height: 50px;
+        border: 1px solid ${colors.primary};
+        background-color: ${colors.primary};
+        color: ${colors.white};
+        font-family: ${fonts.primary};
+        font-size: 17px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: ${colors.white};
+            color: ${colors.secondary};
+        }
     }
 `;
 

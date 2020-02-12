@@ -9,11 +9,11 @@ function Header(props) {
         props.setCondition(null);
         props.setValue(null);
         props.setTimeline(null);
-        props.setAddress(null);
-        props.setZip(null);
-        props.setName(null);
-        props.setPhone(null);
-        props.setEmail(null);
+        props.setAddress("");
+        props.setZip("");
+        props.setName("");
+        props.setPhone("");
+        props.setEmail("");
     }
 
     return (

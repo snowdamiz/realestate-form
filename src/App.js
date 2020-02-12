@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-
 import Type from './views/type/type';
 import Condition from './views/condition/condition';
 import Value from './views/value/value';
@@ -10,9 +9,9 @@ import Rundown from './views/rundown/rundown';
 
 function App() {
   const [page, setPage] = useState(1);
-  const [type, setType] = useState(null);
+  const [type, setType] = useState(500000);
   const [condition, setCondition] = useState(null);
-  const [value, setValue] = useState(null);
+  const [value, setValue] = useState("500000");
   const [timeline, setTimeline] = useState(null);
   const [address, setAddress] = useState("");
   const [zip, setZip] = useState("");
