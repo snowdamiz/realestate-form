@@ -47,49 +47,49 @@ function Rundown(props) {
                     Here are your Selections
                 </h1>
 
-                <div>
+                <div className="detailsBox"> 
                     <p><span>Property Type</span><br />{props.type}</p>
-                    <img src={EditBtn} onClick={editType} />
+                    <img src={EditBtn} className="editBtn" onClick={editType} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Property Condition</span><br />{props.condition}</p>
-                    <img src={EditBtn} onClick={editCondition} />
+                    <img src={EditBtn} className="editBtn" onClick={editCondition} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Property Value</span><br />{props.value}</p>
-                    <img src={EditBtn} onClick={editValue} />
+                    <img src={EditBtn} className="editBtn" onClick={editValue} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Sale Timeline</span><br />{props.timeline}</p>
-                    <img src={EditBtn} onClick={editTimeline} />
+                    <img src={EditBtn} className="editBtn" onClick={editTimeline} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Address</span><br />{props.address}</p>
-                    <img src={EditBtn} onClick={editAddress} />
+                    <img src={EditBtn} className="editBtn" onClick={editAddress} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Zip Code</span><br />{props.zip}</p>
-                    <img src={EditBtn} onClick={editZip} />
+                    <img src={EditBtn} className="editBtn" onClick={editZip} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Name</span><br />{props.name}</p>
-                    <img src={EditBtn} onClick={editName} />
+                    <img src={EditBtn} className="editBtn" onClick={editName} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Phone</span><br />{props.phone}</p>
-                    <img src={EditBtn} onClick={editPhone} />
+                    <img src={EditBtn} className="editBtn" onClick={editPhone} />
                 </div>
 
-                <div>
+                <div className="detailsBox">
                     <p><span>Email</span><br />{props.email}</p>
-                    <img src={EditBtn} onClick={editEmail} />
+                    <img src={EditBtn} className="editBtn" onClick={editEmail} />
                 </div>
             </Content>
         </RundownWrap>

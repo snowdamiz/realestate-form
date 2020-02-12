@@ -116,11 +116,14 @@ export const Content = styled.section`
         cursor: pointer;
     }
 
-    div {
+    .detailsBox {
         width: 260px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: #efefef;
+        margin-bottom: 8px;
+        padding: 0 10px 0 10px;
 
         p {
             font-family: ${fonts.primary};
@@ -135,9 +138,9 @@ export const Content = styled.section`
             }
         }
 
-        img {
-            width: 26px;
-            height: 26px;
+        .editBtn {
+            width: 24px;
+            height: 24px;
             cursor: pointer;
         }
     }
