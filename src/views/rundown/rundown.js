@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import EditBtn from '../../assets/edit.svg';
@@ -6,6 +6,41 @@ import { RundownWrap } from './rundownStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Rundown(props) {
+    const [type, setType] = useState("");
+    const [condition, setCondition] = useState("");
+    const [timeline, setTimeline] = useState("");
+
+    useEffect(() => {
+        const propTypes = props.type;
+        const propCondition = props.condition;
+        const propTimeline = props.timeline;
+    
+        const types = {
+            1: "Single Family",
+            2: "Multi Family",
+            3: "Lot or Land",
+            4: "Commercial"
+        }
+    
+        const conditions = {
+            1: "Very Good!",
+            2: "Normal Wear",
+            3: "Not so Good",
+            4: "Very Bad"
+        }
+    
+        const timelines = {
+            1: "5 Business Days",
+            2: "10 Business Days",
+            3: "15 Business Days",
+            4: "20 Business Days"
+        }
+    
+        setType(types[propTypes]);
+        setCondition(conditions[propCondition]);
+        setTimeline(timelines[propTimeline]);
+    }, [])
+
     const editType = () => props.setPage(1);
     const editCondition = () => props.setPage(2);
     const editValue = () => props.setPage(3);
@@ -15,7 +50,6 @@ function Rundown(props) {
     const editName = () => props.setPage(6);
     const editPhone = () => props.setPage(6);
     const editEmail = () => props.setPage(6);
-
 
     return (
         <RundownWrap>
@@ -48,12 +82,12 @@ function Rundown(props) {
                 </h1>
 
                 <div className="detailsBox"> 
-                    <p><span>Property Type</span><br />{props.type}</p>
+                    <p><span>Property Type</span><br />{type}</p>
                     <img src={EditBtn} className="editBtn" onClick={editType} />
                 </div>
 
                 <div className="detailsBox">
-                    <p><span>Property Condition</span><br />{props.condition}</p>
+                    <p><span>Property Condition</span><br />{condition}</p>
                     <img src={EditBtn} className="editBtn" onClick={editCondition} />
                 </div>
 
@@ -63,7 +97,7 @@ function Rundown(props) {
                 </div>
 
                 <div className="detailsBox">
-                    <p><span>Sale Timeline</span><br />{props.timeline}</p>
+                    <p><span>Sale Timeline</span><br />{timeline}</p>
                     <img src={EditBtn} className="editBtn" onClick={editTimeline} />
                 </div>
 
