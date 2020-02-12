@@ -52,20 +52,27 @@ function Rundown(props) {
     const editPhone = () => props.setPage(6);
     const editEmail = () => props.setPage(6);
 
+    const val = props.value;
+    const add = props.address;
+    const zi = props.zip;
+    const nam = props.name;
+    const pho = props.phone;
+    const ema = props.email;
+
     const submit = (props) => {
         let dataSubmitted = {
             type: type,
             condition: condition,
-            value: props.value,
+            value: val,
             timeline: timeline,
-            address: props.address,
-            zip: props.zip,
-            name: props.name,
-            phone: props.phone,
-            email: props.email
+            address: add,
+            zip: zi,
+            name: nam,
+            phone: pho,
+            email: ema
         };
 
-        Axios.post("", dataSubmitted);
+        Axios.post("http://localhost:5000/api/send", dataSubmitted);
     }
 
     return (
