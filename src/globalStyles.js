@@ -52,7 +52,7 @@ export const Content = styled.section`
     }
 
     .btn-inactive {
-        width: 200px;
+        width: 225px;
         height: 50px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -66,7 +66,7 @@ export const Content = styled.section`
     }
 
     .btn-active {
-        width: 200px;
+        width: 225px;
         height: 50px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -77,6 +77,25 @@ export const Content = styled.section`
         justify-content: flex-start;
         align-items: center;
         cursor: pointer;
+    }
+
+    button {
+        background-color: ${colors.white};
+        border: none;
+        color: ${colors.primary};
+        font-family: ${fonts.primary};
+        font-weight: 700;
+        font-size: 22px;
+        margin-top: 15px;
+        cursor: pointer;
+
+        ${media.tablet} {
+            font-size: 24px;
+        }
+
+        ${media.largeTablet} {
+            font-size: 26px;
+        }
     }
 `;
 
@@ -125,4 +144,17 @@ export const Button = styled.div`
         font-size: 18px;
         margin-left: 22px;
     }
+`;
+
+export const Input = styled.input`
+    width: 300px;
+    height: 50px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px ${colors.shadow};
+    border: 1px solid transparent;
+    font-family: ${fonts.primary};
+    font-size: 18px;
+    color: ${colors.shadow};
+    padding: 0 0 0 10px;
+    margin: 10px 0 6px 0;
 `;

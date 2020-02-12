@@ -57,6 +57,7 @@ function Type(props) {
                     <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
                     <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Commercial</h3>
                 </Button>
+                <button>NEXT</button>
             </Content>
         </TypeWrap>
     )

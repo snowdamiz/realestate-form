@@ -1,7 +1,8 @@
 import React from 'react';
 import Header from '../../components/header/header';
 import { ConditionWrap } from './conditionStyles';
-import { Content } from '../../globalStyles';
+import { Content, Button } from '../../globalStyles';
+import Checkmark from '../../assets/checkmark.svg';
 
 function Condition(props) {
     return (
@@ -34,6 +35,28 @@ function Condition(props) {
                     What is the condition<br/> 
                     of the property?
                 </h1>
+                <Button className={props.type === 1 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 1 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 1 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 1 ? 'text-active' : 'text-inactive'}>Very Good!</h3>
+                </Button>
+
+                <Button className={props.type === 2 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 2 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 2 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 2 ? 'text-active' : 'text-inactive'}>Normal Wear</h3>
+                </Button>
+                <Button className={props.type === 3 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 3 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 3 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 3 ? 'text-active' : 'text-inactive'}>Not So Great</h3>
+                </Button>
+                <Button className={props.type === 4 ? 'btn-active' : 'btn-inactive'}>
+                    {props.type === 4 ? <img src={Checkmark} /> : null }
+                    <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
+                    <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Very Bad</h3>
+                </Button>
+                <button>NEXT</button>
             </Content>
         </ConditionWrap>
     )
