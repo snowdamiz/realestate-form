@@ -4,7 +4,7 @@ import { fonts, colors, media } from '../../vars';
 
 export const HeaderWrap = styled.section`
     width: 100%;
-    height: 200px;
+    height: 170px;
     background-color #fff;
     background-image: url('${Banner}');
     // background-size: cover;
@@ -12,11 +12,11 @@ export const HeaderWrap = styled.section`
     background-repeat: no-repeat;
 
     ${media.tablet} {
-        height: 240px;
+        height: 180px;
     }
 
     ${media.largeTablet} {
-        height: 260px;
+        height: 220px;
     }
 
     ${media.desktop} {
@@ -24,13 +24,27 @@ export const HeaderWrap = styled.section`
     }
 
     img {
-        width: 60px;
-        height: 60px;
+        width: 50px;
+        height: 50px;
         // border: 1px solid red;
         position: absolute;
         right: 0;
         top: 0;
         margin-top: 30px;
         margin-right: 30px;
+
+        ${media.largeTablet} {
+            width: 60px;
+            height: 60px;
+            margin-top: 40px;
+            margin-right: 40px;
+        }
+
+        ${media.desktop} {
+            width: 70px;
+            height: 70px;
+            margin-top: 50px;
+            margin-right: 50px;
+        }
     }
 `;
