@@ -4,30 +4,30 @@ import { fonts, colors, media } from './vars';
 export const Content = styled.section`
     width: 100%;
     // border: 1px solid blue;
-    margin-top: -30px;
+    margin-top: -50px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
 
     ${media.tablet} {
-        margin-top: -40px;
+        margin-top: -80px;
     }
 
     ${media.largeTablet} {
-        margin-top: -60px;
+        margin-top: -125px;
     }
 
     ${media.desktop} {
-        margin-top: -90px;
+        margin-top: -150px;
     }
 
     ${media.modern} {
-        margin-top: -120px;
+        // margin-top: -170px;
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 26px;
         color: ${colors.black};
         font-family: ${fonts.primary};
         font-style: italic;
@@ -36,13 +36,13 @@ export const Content = styled.section`
         line-height: 32px;
 
         ${media.tablet} {
-            font-size: 30px;
-            line-height: 36px;
+            font-size: 28px;
+            line-height: 32px;
         }
     
         ${media.largeTablet} {
-            font-size: 34px;
-            line-height: 40px;
+            font-size: 30px;
+            line-height: 34px;
         }
 
         span {
