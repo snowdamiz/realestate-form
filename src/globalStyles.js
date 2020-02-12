@@ -87,7 +87,6 @@ export const Content = styled.section`
     }
 
     .btn-inactive {
-        width: 240px;
         height: 54px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -99,10 +98,11 @@ export const Content = styled.section`
         align-items: center;
         cursor: pointer;
         border: 2px solid ${colors.white};
+        padding: 0 30px 0 0;
+        min-width: 180px;
     }
 
     .btn-active {
-        width: 240px;
         height: 54px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
@@ -114,6 +114,8 @@ export const Content = styled.section`
         align-items: center;
         cursor: pointer;
         border: 2px solid transparent;
+        padding: 0 30px 0 0;
+        min-width: 180px;
     }
 
     .nextStep {
@@ -260,7 +262,13 @@ export const Button = styled.div`
         font-size: 18px;
         margin-left: 22px;
         margin-top: 19px;
+
+        .text-inactive sm {
+            margin-left: 30px;
+        }
     }
+
+
 
     .text-active {
         font-family: ${fonts.primary};
@@ -269,6 +277,10 @@ export const Button = styled.div`
         font-size: 18px;
         margin-left: 22px;
         margin-top: 19px;
+
+        .sm {
+            margin-left: 30px;
+        }
     }
 `;
 

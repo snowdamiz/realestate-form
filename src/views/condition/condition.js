@@ -55,7 +55,7 @@ function Condition(props) {
                 </h1>
                 {conditionError ? <div className="error">{conditionError}</div> : null}
                 <Button 
-                    className={props.type === 1 ? 'btn-active' : 'btn-inactive'}
+                    className={props.condition === 1 ? 'btn-active' : 'btn-inactive'}
                     onClick={setCondition1}>
                     {props.condition === 1 ? <img src={Checkmark} /> : null }
                     <div className={props.condition === 1 ? 'radio-active' : 'radio-inactive'}></div>

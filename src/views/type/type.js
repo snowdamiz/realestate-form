@@ -61,7 +61,7 @@ function Type(props) {
                     onClick={setType1}>
                     {props.type === 1 ? <img src={Checkmark} /> : null }
                     <div className={props.type === 1 ? 'radio-active' : 'radio-inactive'}></div>
-                    <h3 className={props.type === 1 ? 'text-active' : 'text-inactive'}>Single Family</h3>
+                    <h3 className={props.type === 1 ? 'text-active sm' : 'text-inactive sm'}>Single Family</h3>
                 </Button>
 
                 <Button
