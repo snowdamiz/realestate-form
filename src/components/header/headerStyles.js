@@ -32,6 +32,7 @@ export const HeaderWrap = styled.section`
         top: 0;
         margin-top: 30px;
         margin-right: 30px;
+        cursor: pointer;
 
         ${media.largeTablet} {
             width: 60px;
