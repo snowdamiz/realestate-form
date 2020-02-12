@@ -4,7 +4,7 @@ import { fonts, colors, media } from './vars';
 export const Content = styled.section`
     width: 100%;
     // border: 1px solid blue;
-    margin-top: -30px;
+    margin-top: -40px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -28,7 +28,7 @@ export const Content = styled.section`
     }
 
     h1 {
-        font-size: 26px;
+        font-size: 24px;
         color: ${colors.black};
         font-family: ${fonts.primary};
         font-style: italic;
@@ -93,8 +93,8 @@ export const Content = styled.section`
         &:active {
             background: transparent;
         }
-        width: 235px;
-        height: 60px;
+        width: 230px;
+        height: 54px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
         border-radius: 10px;
@@ -108,8 +108,8 @@ export const Content = styled.section`
     }
 
     .btn-active {
-        width: 235px;
-        height: 60px;
+        width: 230px;
+        height: 54px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
         border-radius: 10px;
@@ -245,6 +245,7 @@ export const Button = styled.button`
         border-radius: 50%;
         border: 1px solid ${colors.shadow};
         margin-left: 20px;
+        margin-top: -4px;
         background-color: ${colors.white};
     }
 
@@ -254,6 +255,7 @@ export const Button = styled.button`
         border-radius: 50%;
         border: 1px solid ${colors.white};
         margin-left: 20px;
+        margin-top: -4px;
         background-color: ${colors.white};
     }
 
@@ -263,6 +265,7 @@ export const Button = styled.button`
         font-weight: 400;
         font-size: 18px;
         margin-left: 22px;
+        margin-top: 13px;
     }
 
     .text-active {
@@ -271,6 +274,7 @@ export const Button = styled.button`
         font-weight: 400;
         font-size: 18px;
         margin-left: 22px;
+        margin-top: 13px;
     }
 `;
 
