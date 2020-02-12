@@ -72,7 +72,7 @@ function Rundown(props) {
             email: ema
         };
 
-        Axios.post("http://localhost:5000/api/send", dataSubmitted);
+        Axios.post("https://realestate-form-api.herokuapp.com/api/send", dataSubmitted);
     }
 
     return (
