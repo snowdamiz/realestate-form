@@ -1,9 +1,14 @@
 import React from 'react';
 import Header from '../../components/header/header';
+import ProgressBar from '../../components/progressBar/progressBar';
 import { AddressWrap } from './addressStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Address(props) {
+    const NextStep = () => {
+        props.setPage(props.page + 1);
+    }
+    
     return (
         <AddressWrap>
             <Header 
@@ -37,7 +42,8 @@ function Address(props) {
                 </h1>
                 <Input type="text" placeholder="Address" />
                 <Input type="text" placeholder="Zip Code" />
-                <button>NEXT</button>
+                <button onClick={NextStep}>NEXT</button>
+                <ProgressBar page={props.page} />
             </Content>
         </AddressWrap>
     )

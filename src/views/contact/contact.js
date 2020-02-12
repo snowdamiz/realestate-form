@@ -1,9 +1,14 @@
 import React from 'react';
 import Header from '../../components/header/header';
+import ProgressBar from '../../components/progressBar/progressBar';
 import { ContactWrap } from './contactStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Contact(props) {
+    const NextStep = () => {
+        props.setPage(props.page + 1);
+    }
+    
     return (
         <ContactWrap>
             <Header 
@@ -36,7 +41,8 @@ function Contact(props) {
                 <Input type="text" placeholder="Name" />
                 <Input type="text" placeholder="Phone" />
                 <Input type="text" placeholder="Email" />
-                <button>NEXT</button>
+                <button onClick={NextStep}>NEXT</button>
+                <ProgressBar page={props.page} />
             </Content>
         </ContactWrap>
     )

@@ -1,10 +1,15 @@
 import React from 'react';
 import Header from '../../components/header/header';
+import ProgressBar from '../../components/progressBar/progressBar';
 import { ConditionWrap } from './conditionStyles';
 import { Content, Button } from '../../globalStyles';
 import Checkmark from '../../assets/checkmark.svg';
 
 function Condition(props) {
+    const NextStep = () => {
+        props.setPage(props.page + 1);
+    }
+
     return (
         <ConditionWrap>
             <Header 
@@ -56,7 +61,8 @@ function Condition(props) {
                     <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
                     <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Very Bad</h3>
                 </Button>
-                <button>NEXT</button>
+                <button onClick={NextStep}>NEXT</button>
+                <ProgressBar page={props.page} />
             </Content>
         </ConditionWrap>
     )

@@ -1,10 +1,15 @@
 import React from 'react';
 import Header from '../../components/header/header';
+import ProgressBar from '../../components/progressBar/progressBar';
 import { TypeWrap } from './typeStyles';
 import { Content, Button } from '../../globalStyles';
 import Checkmark from '../../assets/checkmark.svg';
 
 function Type(props) {
+    const NextStep = () => {
+        props.setPage(props.page + 1);
+    }
+
     return (
         <TypeWrap>
             <Header 
@@ -57,7 +62,8 @@ function Type(props) {
                     <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
                     <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Commercial</h3>
                 </Button>
-                <button>NEXT</button>
+                <button onClick={NextStep}>NEXT</button>
+                <ProgressBar page={props.page} />
             </Content>
         </TypeWrap>
     )
