@@ -54,26 +54,26 @@ export const Content = styled.section`
 
     .slider {
         margin: 0px auto;
-        .value {
-            position: absolute;
-            margin: 0px auto;
-            margin-left: 100px;
-            text-align: center;
-            font-family: ${fonts.primary};
-            color: ${colors.dark};
-            font-weight: 500;
-            font-size: 16px;
-            border: 1px solid ${colors.shadow};
-            border-radius: 5px;
-            width: 120px;
-            padding: 10px 0;
-        }
+        width: 320px;
+    }
+
+    .value {
+        margin: 0px auto;
+        text-align: center;
+        font-family: ${fonts.primary};
+        color: ${colors.dark};
+        font-weight: 500;
+        font-size: 16px;
+        border: 1px solid ${colors.shadow};
+        border-radius: 5px;
+        width: 120px;
+        padding: 10px 0;
     }
 
     .rangeslider__fill {
         background-color: #fff;
         border: 1px solid ${colors.shadow};
-        width: 320px;
+        width: 320px !important;
     }
 
     .rangeslider__handle {

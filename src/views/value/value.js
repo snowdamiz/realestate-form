@@ -57,8 +57,8 @@ function Value(props) {
                         value={props.value}
                         stop={5000}
                         onChange={handleChange} />
-                    <input value={props.value} className='value' onChange={handleInputChange} />
                 </div>
+                <input value={props.value} className='value' onChange={handleInputChange} />
                 <button className="nextStepValue" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />
                 <button className="prevStep" onClick={PrevStep}>Go Back</button>
