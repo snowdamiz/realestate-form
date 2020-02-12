@@ -1,11 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import { ContactWrap } from './contactStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Contact(props) {
-    const NextStep = () => props.setPage(props.page + 1);
+    const [contactError, setContactError] = useState(null);
+
+    const NextStep = () => {
+        const regexLetters = /^[a-zA-Z\s]*$/;
+        const regexNumber = /^\d+$/;
+        const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        const name = props.name;
+        const phone = props.phone;
+        const email = props.email;
+
+        if (
+            name.length < 3 ||
+            !regexLetters.test(name) ||
+            phone.length != 10 ||
+            !regexNumber.test(phone) ||
+            email.length < 6 ||
+            !regexEmail.test(email)
+            ) {
+            setContactError("Please Enter Valid Contact Information");
+        } else {
+            setContactError(null);
+            props.setPage(7);
+        }
+    };
+
     const PrevStep = () => props.setPage(props.page - 1);
 
     const setName = (e) => props.setName(e.target.value);
@@ -41,13 +66,16 @@ function Contact(props) {
                     <span>6.</span>
                     Who should we contact?
                 </h1>
+                {contactError ? <div className="error">{contactError}</div> : null }
                 <Input
                     placeholder="Name"
                     onChange={setName} />
                 <Input
+                    value={props.phone}
                     placeholder="Phone"
                     onChange={setPhone} />
                 <Input
+                    value={props.email}
                     placeholder="Email"
                     onChange={setEmail} />
                 <button className="nextStep" onClick={NextStep}>NEXT</button>

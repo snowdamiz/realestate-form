@@ -65,9 +65,11 @@ function Address(props) {
                 </h1>
                 {addressError ? <div className="error">{addressError}</div>: null }
                 <Input
+                    value={props.address}
                     placeholder="Address"
                     onChange={setAddress}/>
                 <Input
+                    value={props.zip}
                     placeholder="Zip Code"
                     onChange={setZip} />
                 <button className="nextStep" onClick={NextStep}>NEXT</button>

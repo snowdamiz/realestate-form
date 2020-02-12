@@ -16,9 +16,9 @@ function App() {
   const [timeline, setTimeline] = useState(null);
   const [address, setAddress] = useState("");
   const [zip, setZip] = useState("");
-  const [name, setName] = useState(null);
-  const [phone, setPhone] = useState(null);
-  const [email, setEmail] = useState(null);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
   // useEffect(() => {
 
