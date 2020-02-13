@@ -69,4 +69,74 @@ export const ProgressBarWrap = styled.section`
         position: absolute;
         margin: -10px 0 0 315px;
     }
+
+    .percent1 {
+        font-family: ${fonts.primary};
+        position: absolute;
+        margin: -40px 0 0 -38px;
+
+        span {
+            font-weight: 600;
+            color: ${colors.primary};
+        }
+    }
+
+    .percent2 {
+        font-family: ${fonts.primary};
+        position: absolute;
+        margin: -40px 0 0 50px;
+
+        span {
+            font-weight: 600;
+            color: ${colors.primary};
+        }
+    }
+
+    .percent3 {
+        font-family: ${fonts.primary};
+        position: absolute;
+        margin: -40px 0 0 90px;
+
+        span {
+            font-weight: 600;
+            color: ${colors.primary};
+        }
+    }
+
+    .percent4 {
+        font-family: ${fonts.primary};
+        position: absolute;
+        margin: -40px 0 0 150px;
+
+        span {
+            font-weight: 600;
+            color: ${colors.primary};
+        }
+    }
+
+    .percent5 {
+        width: 110px;
+        // border: 1px solid red;
+        font-family: ${fonts.primary};
+        position: absolute;
+        margin: -40px 0 0 230px;
+
+        span {
+            font-weight: 600;
+            color: ${colors.primary};
+        }
+    }
+
+    .percent6 {
+        width: 115px;
+        // border: 1px solid red;
+        font-family: ${fonts.primary};
+        position: absolute;
+        margin: -40px 0 0 280px;
+
+        span {
+            font-weight: 600;
+            color: ${colors.primary};
+        }
+    }
 `;
