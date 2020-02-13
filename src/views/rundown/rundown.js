@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
 import Header from '../../components/header/header';
 import ProgressBar from '../../components/progressBar/progressBar';
 import EditBtn from '../../assets/edit.svg';
@@ -42,38 +41,12 @@ function Rundown(props) {
         setTimeline(timelines[propTimeline]);
     }, [])
 
-    const editType = () => props.setPage(1);
-    const editCondition = () => props.setPage(2);
-    const editValue = () => props.setPage(3);
-    const editTimeline = () => props.setPage(4);
-    const editAddress = () => props.setPage(5);
-    const editZip = () => props.setPage(5);
-    const editName = () => props.setPage(6);
-    const editPhone = () => props.setPage(6);
-    const editEmail = () => props.setPage(6);
-
     const val = props.value;
     const add = props.address;
     const zi = props.zip;
     const nam = props.name;
     const pho = props.phone;
     const ema = props.email;
-
-    const submit = (props) => {
-        let dataSubmitted = {
-            type: type,
-            condition: condition,
-            value: val,
-            timeline: timeline,
-            address: add,
-            zip: zi,
-            name: nam,
-            phone: pho,
-            email: ema
-        };
-
-        Axios.post("https://realestate-form-api.herokuapp.com/api/send", dataSubmitted);
-    }
 
     return (
         <RundownWrap>
@@ -101,55 +74,45 @@ function Rundown(props) {
 
             <Content>
                 <h1>
-                    <span>6.</span>
-                    Varify Your Selections
+                    <span>7.</span>Thank you for your<br/>
+                    submission, here are<br />
+                    your selections
                 </h1>
-
-                <button className="submitBtn" onClick={submit}>SUBMIT</button>
 
                 <div className="detailsBox"> 
                     <p><span>Property Type</span><br />{type}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editType} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Property Condition</span><br />{condition}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editCondition} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Property Value</span><br />{props.value}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editValue} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Sale Timeline</span><br />{timeline}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editTimeline} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Address</span><br />{props.address}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editAddress} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Zip Code</span><br />{props.zip}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editZip} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Name</span><br />{props.name}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editName} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Phone</span><br />{props.phone}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editPhone} />
                 </div>
 
                 <div className="detailsBox">
                     <p><span>Email</span><br />{props.email}</p>
-                    <img src={EditBtn} className="editBtn" onClick={editEmail} />
                 </div>
             </Content>
         </RundownWrap>

@@ -222,6 +222,7 @@ export const Content = styled.section`
         font-size: 17px;
         font-weight: 700;
         margin-bottom: 15px;
+        margin-top: 20px;
         border-radius: 5px;
         cursor: pointer;
 
