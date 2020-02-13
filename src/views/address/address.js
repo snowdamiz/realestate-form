@@ -60,7 +60,7 @@ function Address(props) {
                 <h1>
                     <span>5.</span>
                     Great, you're almost done!<br/> 
-                    what is the address or<br />
+                    what is the address of<br />
                     your property?
                 </h1>
                 {addressError ? <div className="error">{addressError}</div>: null }
