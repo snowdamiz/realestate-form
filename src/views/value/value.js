@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-rangeslider'
 import 'react-rangeslider/lib/index.css'
 import Header from '../../components/header/header';
@@ -58,6 +58,7 @@ function Value(props) {
                         stop={5000}
                         onChange={handleChange} />
                 </div>
+                <p className="priceTag">$</p>
                 <input value={props.value} className='value' onChange={handleInputChange} />
                 <button className="nextStepValue" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />

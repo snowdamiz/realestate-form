@@ -63,7 +63,7 @@ export const Content = styled.section`
         font-family: ${fonts.primary};
         color: ${colors.dark};
         font-weight: 500;
-        font-size: 16px;
+        font-size: 17px;
         border: 1px solid ${colors.shadow};
         border-radius: 5px;
         width: 120px;
@@ -84,6 +84,14 @@ export const Content = styled.section`
             background-color: ${colors.primary};
             box-shadow: none;
         }
+    }
+
+    .priceTag {
+        position: absolute;
+        margin-top: 214px;
+        margin-left: -34px;
+        font-family: ${fonts.primary};
+        font-weight: 600;
     }
 
     .btn-inactive {
