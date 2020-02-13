@@ -94,7 +94,7 @@ export const Content = styled.section`
         margin: 10px 0 6px 0;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         cursor: pointer;
         border: 2px solid ${colors.white};
@@ -110,7 +110,7 @@ export const Content = styled.section`
         margin: 10px 0 6px 0;
         display: flex;
         flex-flow: row nowrap;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         cursor: pointer;
         border: 2px solid transparent;
@@ -250,21 +250,22 @@ export const Button = styled.div`
         height: 22px;
         border-radius: 50%;
         border: 1px solid ${colors.white};
-        margin-left: 20px;
-        margin-top: 0px;
+        // margin-left: 20px;
+        // margin-top: 0px;
         background-color: ${colors.white};
     }
 
     .text-inactive {
+        // border: 1px solid red;
         font-family: ${fonts.primary};
         color: ${colors.black};
         font-weight: 400;
         font-size: 18px;
-        margin-left: 22px;
-        margin-top: 19px;
+        margin-left: 30px;
+        // margin-top: 19px;
 
         .text-inactive sm {
-            margin-left: 30px;
+            // margin-left: 30px;
         }
     }
 
@@ -275,11 +276,11 @@ export const Button = styled.div`
         color: ${colors.white};
         font-weight: 400;
         font-size: 18px;
-        margin-left: 22px;
-        margin-top: 19px;
+        margin-left: 30px;
+        // margin-top: 19px;
 
         .sm {
-            margin-left: 30px;
+            // margin-left: 30px;
         }
     }
 `;

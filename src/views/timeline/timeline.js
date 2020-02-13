@@ -58,30 +58,30 @@ function Timeline(props) {
                 <Button
                     className={props.timeline === 1 ? 'btn-active' : 'btn-inactive'}
                     onClick={setTimeline1}>
-                    {props.timeline === 1 ? <img src={Checkmark} /> : null }
-                    <div className={props.timeline === 1 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.timeline === 1 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 1 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.timeline === 1 ? 'text-active' : 'text-inactive'}>05 Business Days</h3>
                 </Button>
 
                 <Button
                     className={props.timeline === 2 ? 'btn-active' : 'btn-inactive'}
                     onClick={setTimeline2}>
-                    {props.timeline === 2 ? <img src={Checkmark} /> : null }
-                    <div className={props.timeline === 2 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.timeline === 2 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 2 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.timeline === 2 ? 'text-active' : 'text-inactive'}>10 Business Days</h3>
                 </Button>
                 <Button
                     className={props.timeline === 3 ? 'btn-active' : 'btn-inactive'}
                     onClick={setTimeline3}>
-                    {props.timeline === 3 ? <img src={Checkmark} /> : null }
-                    <div className={props.timeline === 3 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.timeline === 3 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 3 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.timeline === 3 ? 'text-active' : 'text-inactive'}>15 Business Days</h3>
                 </Button>
                 <Button 
                     className={props.timeline === 4 ? 'btn-active' : 'btn-inactive'}
                     onClick={setTimeline4}>
-                    {props.timeline === 4 ? <img src={Checkmark} /> : null }
-                    <div className={props.timeline === 4 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.timeline === 4 ? <img src={Checkmark} /> : null }
+                    <div className={props.timeline === 4 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.timeline === 4 ? 'text-active' : 'text-inactive'}>20 Business Days</h3>
                 </Button>
                 <button className="nextStep" onClick={NextStep}>NEXT</button>

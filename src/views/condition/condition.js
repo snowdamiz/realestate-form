@@ -57,30 +57,30 @@ function Condition(props) {
                 <Button 
                     className={props.condition === 1 ? 'btn-active' : 'btn-inactive'}
                     onClick={setCondition1}>
-                    {props.condition === 1 ? <img src={Checkmark} /> : null }
-                    <div className={props.condition === 1 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.condition === 1 ? <img src={Checkmark} /> : null }
+                    <div className={props.condition === 1 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.condition === 1 ? 'text-active' : 'text-inactive'}>Very Good!</h3>
                 </Button>
 
                 <Button 
                     className={props.condition === 2 ? 'btn-active' : 'btn-inactive'}
                     onClick={setCondition2}>
-                    {props.condition === 2 ? <img src={Checkmark} /> : null }
-                    <div className={props.condition === 2 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.condition === 2 ? <img src={Checkmark} /> : null }
+                    <div className={props.condition === 2 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.condition === 2 ? 'text-active' : 'text-inactive'}>Normal Wear</h3>
                 </Button>
                 <Button 
                     className={props.condition === 3 ? 'btn-active' : 'btn-inactive'}
                     onClick={setCondition3}>
-                    {props.condition === 3 ? <img src={Checkmark} /> : null }
-                    <div className={props.condition === 3 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.condition === 3 ? <img src={Checkmark} /> : null }
+                    <div className={props.condition === 3 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.condition === 3 ? 'text-active' : 'text-inactive'}>Not So Great</h3>
                 </Button>
                 <Button
                     className={props.condition === 4 ? 'btn-active' : 'btn-inactive'}
                     onClick={setCondition4}>
-                    {props.condition === 4 ? <img src={Checkmark} /> : null }
-                    <div className={props.condition === 4 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.condition === 4 ? <img src={Checkmark} /> : null }
+                    <div className={props.condition === 4 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.condition === 4 ? 'text-active' : 'text-inactive'}>Very Bad</h3>
                 </Button>
                 <button className="nextStep" onClick={NextStep}>NEXT</button>

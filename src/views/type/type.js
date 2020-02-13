@@ -59,33 +59,33 @@ function Type(props) {
                     value="1"
                     className={props.type === 1 ? 'btn-active' : 'btn-inactive'}
                     onClick={setType1}>
-                    {props.type === 1 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 1 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.type === 1 ? <img src={Checkmark} /> : null } */}
+                    {/* <div className={props.type === 1 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.type === 1 ? 'text-active sm' : 'text-inactive sm'}>Single Family</h3>
-                </Button>
-
+                </Button> 
+        
                 <Button
                     value="2"
                     className={props.type === 2 ? 'btn-active' : 'btn-inactive'}
                     onClick={setType2}>
-                    {props.type === 2 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 2 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.type === 2 ? <img src={Checkmark} /> : null } */}
+                    {/* <div className={props.type === 2 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.type === 2 ? 'text-active' : 'text-inactive'}>Multi Family</h3>
                 </Button>
                 <Button
                     value="3"
                     className={props.type === 3 ? 'btn-active' : 'btn-inactive'}
                     onClick={setType3}>
-                    {props.type === 3 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 3 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.type === 3 ? <img src={Checkmark} /> : null } */}
+                    {/* <div className={props.type === 3 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.type === 3 ? 'text-active' : 'text-inactive'}>Lot or Land</h3>
                 </Button>
                 <Button
                     value="4"
                     className={props.type === 4 ? 'btn-active' : 'btn-inactive'}
                     onClick={setType4}>
-                    {props.type === 4 ? <img src={Checkmark} /> : null }
-                    <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div>
+                    {/* {props.type === 4 ? <img src={Checkmark} /> : null } */}
+                    {/* <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Commercial</h3>
                 </Button>
                 <button className="nextStep" onClick={NextStep}>NEXT</button>
