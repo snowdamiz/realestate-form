@@ -162,8 +162,9 @@ export const Content = styled.section`
         font-family: ${fonts.primary};
         background-color: transparent;
         position: absolute;
-        bottom: 30px;
+        bottom: 22px;
         cursor: pointer;
+        font-size: 18px;
     }
 
     .detailsBox {
