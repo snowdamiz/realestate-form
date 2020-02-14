@@ -31,7 +31,6 @@ export const Content = styled.section`
         font-size: 24px;
         color: ${colors.black};
         font-family: ${fonts.primary};
-        font-style: italic;
         text-align: center;
         font-weight: 500;
         line-height: 32px;
@@ -44,11 +43,6 @@ export const Content = styled.section`
         ${media.largeTablet} {
             font-size: 30px;
             line-height: 34px;
-        }
-
-        span {
-            font-size: 36px;
-            color: ${colors.primary};
         }
     }
 
@@ -68,6 +62,7 @@ export const Content = styled.section`
         border-radius: 5px;
         width: 120px;
         padding: 10px 0;
+        letter-spacing: 1px;
     }
 
     .rangeslider__fill {
@@ -88,10 +83,36 @@ export const Content = styled.section`
 
     .priceTag {
         position: absolute;
-        margin-top: 214px;
-        margin-left: -34px;
+        margin-top: 211px;
+        margin-left: -46px;
         font-family: ${fonts.primary};
         font-weight: 600;
+        font-size: 16px;
+        color: ${colors.primary};
+
+        ${media.tablet} {
+            margin-top: 218px;
+        }
+
+        ${media.largeTablet} {
+            margin-top: 227px;
+        }
+    }
+
+    .sep {
+        position: absolute;
+        margin-top: 212px;
+        font-family: ${fonts.primary};
+        font-weight: 600;
+        margin-left: 20px;
+
+        ${media.tablet} {
+            margin-top: 219px;
+        }
+
+        ${media.largeTablet} {
+            margin-top: 227px;
+        }
     }
 
     .btn-inactive {

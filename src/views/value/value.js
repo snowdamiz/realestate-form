@@ -52,13 +52,14 @@ function Value(props) {
                 </h1>
                 <div className='slider'>
                     <Slider
-                        min={100000}
-                        max={1000000}
+                        min={100}
+                        max={995}
                         value={props.value}
-                        stop={5000}
+                        step={5}
                         onChange={handleChange} />
                 </div>
                 <p className="priceTag">$</p>
+                <p className="sep">k</p>
                 <input value={props.value} className='value' onChange={handleInputChange} />
                 <button className="nextStepValue" onClick={NextStep}>NEXT</button>
                 <ProgressBar page={props.page} />

@@ -60,7 +60,7 @@ function Timeline(props) {
                     onClick={setTimeline1}>
                     {/* {props.timeline === 1 ? <img src={Checkmark} /> : null }
                     <div className={props.timeline === 1 ? 'radio-active' : 'radio-inactive'}></div> */}
-                    <h3 className={props.timeline === 1 ? 'text-active' : 'text-inactive'}>05 Business Days</h3>
+                    <h3 className={props.timeline === 1 ? 'text-active' : 'text-inactive'}>5 Business Days</h3>
                 </Button>
 
                 <Button

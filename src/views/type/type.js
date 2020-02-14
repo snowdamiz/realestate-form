@@ -49,7 +49,6 @@ function Type(props) {
 
             <Content>
                 <h1>
-                    <span>1.</span>
                     What type of property<br/> 
                     are you interested<br/>
                     in selling?
