@@ -6,47 +6,47 @@ import { RundownWrap } from './rundownStyles';
 import { Content, Input } from '../../globalStyles';
 
 function Rundown(props) {
-    const [type, setType] = useState("");
-    const [condition, setCondition] = useState("");
-    const [timeline, setTimeline] = useState("");
+    // const [type, setType] = useState("");
+    // const [condition, setCondition] = useState("");
+    // const [timeline, setTimeline] = useState("");
 
-    useEffect(() => {
-        const propTypes = props.type;
-        const propCondition = props.condition;
-        const propTimeline = props.timeline;
+    // useEffect(() => {
+    //     const propTypes = props.type;
+    //     const propCondition = props.condition;
+    //     const propTimeline = props.timeline;
     
-        const types = {
-            1: "Single Family",
-            2: "Multi Family",
-            3: "Lot or Land",
-            4: "Commercial"
-        }
+    //     const types = {
+    //         1: "Single Family",
+    //         2: "Multi Family",
+    //         3: "Lot or Land",
+    //         4: "Commercial"
+    //     }
     
-        const conditions = {
-            1: "Very Good!",
-            2: "Normal Wear",
-            3: "Not so Good",
-            4: "Very Bad"
-        }
+    //     const conditions = {
+    //         1: "Very Good!",
+    //         2: "Normal Wear",
+    //         3: "Not so Good",
+    //         4: "Very Bad"
+    //     }
     
-        const timelines = {
-            1: "5 Business Days",
-            2: "10 Business Days",
-            3: "15 Business Days",
-            4: "20 Business Days"
-        }
+    //     const timelines = {
+    //         1: "5 Business Days",
+    //         2: "10 Business Days",
+    //         3: "15 Business Days",
+    //         4: "20 Business Days"
+    //     }
     
-        setType(types[propTypes]);
-        setCondition(conditions[propCondition]);
-        setTimeline(timelines[propTimeline]);
-    }, [])
+    //     setType(types[propTypes]);
+    //     setCondition(conditions[propCondition]);
+    //     setTimeline(timelines[propTimeline]);
+    // }, [])
 
-    const val = props.value;
-    const add = props.address;
-    const zi = props.zip;
-    const nam = props.name;
-    const pho = props.phone;
-    const ema = props.email;
+    // const val = props.value;
+    // const add = props.address;
+    // const zi = props.zip;
+    // const nam = props.name;
+    // const pho = props.phone;
+    // const ema = props.email;
 
     return (
         <RundownWrap>
@@ -74,12 +74,17 @@ function Rundown(props) {
 
             <Content>
                 <h1>
-                    Thank you for your<br/>
-                    submission, here are<br />
-                    your selections
+                    All Done!<br/>
                 </h1>
+                <h2 className="tyText">
+                    It looks like your property is<br />
+                    exactly what we specialize in.<br />
+                    One of our representatives will<br />
+                    contact you about your property &<br />
+                    set up an appraisal.
+                </h2>
 
-                <div className="detailsBox"> 
+                {/* <div className="detailsBox"> 
                     <p><span>Property Type</span><br />{type}</p>
                 </div>
 
@@ -113,7 +118,7 @@ function Rundown(props) {
 
                 <div className="detailsBox">
                     <p><span>Email</span><br />{props.email}</p>
-                </div>
+                </div> */}
             </Content>
         </RundownWrap>
     )

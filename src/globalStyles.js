@@ -9,7 +9,7 @@ export const Content = styled.section`
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 140px;
+    // margin-bottom: 140px;
 
     ${media.tablet} {
         margin-top: -80px;
@@ -20,7 +20,7 @@ export const Content = styled.section`
     }
 
     ${media.desktop} {
-        margin-top: -150px;
+        margin-top: -170px;
     }
 
     ${media.modern} {
@@ -28,12 +28,17 @@ export const Content = styled.section`
     }
 
     h1 {
-        font-size: 24px;
+        font-size: 20px;
         color: ${colors.black};
         font-family: ${fonts.primary};
         text-align: center;
         font-weight: 500;
-        line-height: 32px;
+        line-height: 25px;
+
+        ${media.phone} {
+            font-size: 24px;
+            line-height: 27px;
+        }
 
         ${media.tablet} {
             font-size: 28px;
@@ -43,6 +48,26 @@ export const Content = styled.section`
         ${media.largeTablet} {
             font-size: 30px;
             line-height: 34px;
+        }
+    }
+
+    .tyText {
+        // margin-top: 20px;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 19px;
+        font-family: ${fonts.primary};
+        color: ${colors.black};
+        text-align: center;
+
+        ${media.tablet} {
+            font-size: 18px;
+            line-height: 21px;
+        }
+
+        ${media.largeTablet} {
+            font-size: 19px;
+            line-height: 22px;
         }
     }
 
@@ -83,40 +108,48 @@ export const Content = styled.section`
 
     .priceTag {
         position: absolute;
-        margin-top: 211px;
+        margin-top: 179px;
         margin-left: -46px;
         font-family: ${fonts.primary};
         font-weight: 600;
         font-size: 16px;
         color: ${colors.primary};
 
+        ${media.phone} {
+            margin-top: 193px;
+        }
+
         ${media.tablet} {
-            margin-top: 218px;
+            margin-top: 216px;
         }
 
         ${media.largeTablet} {
-            margin-top: 227px;
+            margin-top: 226px;
         }
     }
 
     .sep {
         position: absolute;
-        margin-top: 212px;
+        margin-top: 179px;
         font-family: ${fonts.primary};
         font-weight: 600;
         margin-left: 20px;
 
+        ${media.phone} {
+            margin-top: 193px;
+        }
+
         ${media.tablet} {
-            margin-top: 219px;
+            margin-top: 216px;
         }
 
         ${media.largeTablet} {
-            margin-top: 227px;
+            margin-top: 226px;
         }
     }
 
     .btn-inactive {
-        height: 54px;
+        height: 44px;
         background-color: ${colors.white};
         box-shadow: 0 0 8px ${colors.shadow};
         border-radius: 10px;
@@ -128,7 +161,12 @@ export const Content = styled.section`
         cursor: pointer;
         border: 2px solid ${colors.white};
         padding: 0 30px 0 0;
-        min-width: 180px;
+        min-width: 150px;
+
+        ${media.phone} {
+            height: 50px;
+            min-width: 170px;
+        }
     }
 
     .btn-active {
@@ -145,6 +183,11 @@ export const Content = styled.section`
         border: 2px solid transparent;
         padding: 0 30px 0 0;
         min-width: 180px;
+
+        ${media.phone} {
+            height: 50px;
+            min-width: 170px;
+        }
     }
 
     .nextStep {
@@ -291,12 +334,16 @@ export const Button = styled.div`
         font-family: ${fonts.primary};
         color: ${colors.black};
         font-weight: 400;
-        font-size: 18px;
+        font-size: 17px;
         margin-left: 30px;
         // margin-top: 19px;
 
         .text-inactive sm {
             // margin-left: 30px;
+        }
+
+        ${media.phone} {
+            font-size: 18px;
         }
     }
 
@@ -306,12 +353,16 @@ export const Button = styled.div`
         font-family: ${fonts.primary};
         color: ${colors.white};
         font-weight: 400;
-        font-size: 18px;
+        font-size: 17px;
         margin-left: 30px;
         // margin-top: 19px;
 
         .sm {
             // margin-left: 30px;
+        }
+
+        ${media.phone} {
+            font-size: 18px;
         }
     }
 `;

@@ -9,6 +9,7 @@ export const ProgressBarWrap = styled.section`
     border: 1px solid ${colors.primary};
     position: fixed;
     bottom: 60px;
+    // margin-top: 80px;
 
     .circle1 {
         width: 30px;
@@ -73,7 +74,7 @@ export const ProgressBarWrap = styled.section`
     .percent1 {
         font-family: ${fonts.primary};
         position: absolute;
-        margin: -40px 0 0 -38px;
+        margin: -40px 0 0 -10px;
 
         span {
             font-weight: 600;
@@ -132,7 +133,7 @@ export const ProgressBarWrap = styled.section`
         // border: 1px solid red;
         font-family: ${fonts.primary};
         position: absolute;
-        margin: -40px 0 0 280px;
+        margin: -40px 0 0 235px;
 
         span {
             font-weight: 600;

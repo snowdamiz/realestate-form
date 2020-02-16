@@ -4,7 +4,7 @@ import { fonts, colors, media } from '../../vars';
 
 export const HeaderWrap = styled.section`
     width: 100%;
-    height: 150px;
+    height: 110px;
     background-color #fff;
     background-image: url('${Banner}');
     // background-size: cover;
@@ -13,40 +13,48 @@ export const HeaderWrap = styled.section`
     border-top: 10px solid ${colors.primary};
 
     ${media.tablet} {
-        height: 180px;
+        height: 150px;
+        border-top: 12px solid ${colors.primary};
     }
 
     ${media.largeTablet} {
-        height: 220px;
+        height: 180px;
     }
 
     ${media.desktop} {
-        height: 280px;
+        height: 220px;
     }
 
     img {
-        width: 36px;
-        height: 36px;
+        width: 30px;
+        height: 30px;
         // border: 1px solid red;
         position: absolute;
         right: 0;
         top: 0;
-        margin-top: 20px;
-        margin-right: 20px;
+        margin-top: 15px;
+        margin-right: 15px;
         cursor: pointer;
 
+        ${media.tablet} {
+            width: 36px;
+            height: 36px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
         ${media.largeTablet} {
-            width: 60px;
-            height: 60px;
-            margin-top: 40px;
-            margin-right: 40px;
+            width: 44px;
+            height: 44px;
+            margin-top: 25px;
+            margin-right: 25px;
         }
 
         ${media.desktop} {
-            width: 70px;
-            height: 70px;
-            margin-top: 50px;
-            margin-right: 50px;
+            width: 54px;
+            height: 54px;
+            margin-top: 32px;
+            margin-right: 32px;
         }
     }
 `;
