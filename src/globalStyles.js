@@ -74,8 +74,8 @@ export const Content = styled.section`
     .tyText {
         // margin-top: 20px;
         font-weight: 400;
-        font-size: 19px;
-        line-height: 22px;
+        font-size: 22px;
+        line-height: 25px;
         font-family: ${fonts.primary};
         color: ${colors.black};
         text-align: center;
