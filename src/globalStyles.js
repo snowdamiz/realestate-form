@@ -52,7 +52,7 @@ export const Content = styled.section`
     }
 
     .tyHeading {
-        font-size: 24px;
+        font-size: 34px;
         color: ${colors.black};
         font-family: ${fonts.primary};
         text-align: center;
@@ -60,12 +60,12 @@ export const Content = styled.section`
         line-height: 25px;
 
         ${media.phone} {
-            font-size: 28px;
+            font-size: 38px;
             line-height: 27px;
         }
 
         ${media.tablet} {
-            font-size: 32px;
+            font-size: 45px;
             line-height: 32px;
         }
 
@@ -91,8 +91,8 @@ export const Content = styled.section`
         }
 
         ${media.desktop} {
-            font-size: 20px;
-            line-height: 24px;
+            font-size: 22px;
+            line-height: 25px;
         }
     }
 
