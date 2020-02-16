@@ -80,10 +80,15 @@ export const Content = styled.section`
         color: ${colors.black};
         text-align: center;
 
-        ${media.tablet} {
-            font-size: 18px;
-            line-height: 21px;
+        ${media.phone} {
+            font-size: 19px;
+            line-height: 22px;
         }
+
+        // ${media.tablet} {
+        //     font-size: 18px;
+        //     line-height: 21px;
+        // }
 
         ${media.largeTablet} {
             font-size: 19px;
