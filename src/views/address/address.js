@@ -58,7 +58,6 @@ function Address(props) {
 
             <Content>
                 <h1>
-                    <span>5.</span>
                     Great, you're almost done!<br/> 
                     what is the address of<br />
                     your property?

@@ -8,20 +8,27 @@ import Checkmark from '../../assets/checkmark.svg';
 function Type(props) {
     const [typeError, setTypeError] = useState(null);
 
-    const NextStep = () => {
-        if (props.type) {
-            props.setPage(props.page + 1);
-        } else {
-            setTypeError("Please Make a Selection");
-        }
-    };
-
     const PrevStep = () => props.setPage(props.page - 1);
 
-    const setType1 = () => props.setType(1);
-    const setType2 = () => props.setType(2);
-    const setType3 = () => props.setType(3);
-    const setType4 = () => props.setType(4);
+    const setType1 = () => {
+        props.setType(1);
+        props.setPage(props.page + 1);
+    }
+    
+    const setType2 = () => {
+        props.setType(2);
+        props.setPage(props.page + 1);
+    }
+
+    const setType3 = () => {
+        props.setType(3);
+        props.setPage(props.page + 1);
+    }
+    
+    const setType4 = () => {
+        props.setType(4);
+        props.setPage(props.page + 1);
+    }
 
     return (
         <TypeWrap>
@@ -87,7 +94,7 @@ function Type(props) {
                     {/* <div className={props.type === 4 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.type === 4 ? 'text-active' : 'text-inactive'}>Commercial</h3>
                 </Button>
-                <button className="nextStep" onClick={NextStep}>NEXT</button>
+                {/* <button className="nextStep" onClick={NextStep}>NEXT</button> */}
                 <ProgressBar page={props.page} />
             </Content>
         </TypeWrap>

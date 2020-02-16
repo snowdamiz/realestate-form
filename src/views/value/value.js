@@ -45,7 +45,6 @@ function Value(props) {
 
             <Content>
                 <h1>
-                    <span>3.</span>
                     In your opinion, what<br/> 
                     is the fair value of<br />
                     the property?

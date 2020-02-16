@@ -8,20 +8,27 @@ import Checkmark from '../../assets/checkmark.svg';
 function Condition(props) {
     const [conditionError, setConditionError] = useState(null);
 
-    const NextStep = () => {
-        if (props.condition) {
-            props.setPage(props.page + 1);
-        } else {
-            setConditionError("Please Make a Selection");
-        }
-    };
-
     const PrevStep = () => props.setPage(props.page - 1);
 
-    const setCondition1 = () => props.setCondition(1);
-    const setCondition2 = () => props.setCondition(2);
-    const setCondition3 = () => props.setCondition(3);
-    const setCondition4 = () => props.setCondition(4);
+    const setCondition1 = () => {
+        props.setCondition(1);
+        props.setPage(props.page + 1);
+    };
+    
+    const setCondition2 = () => {
+        props.setCondition(2);
+        props.setPage(props.page + 1);
+    };
+    
+    const setCondition3 = () => {
+        props.setCondition(3);
+        props.setPage(props.page + 1);
+    };
+    
+    const setCondition4 = () => {
+        props.setCondition(4);
+        props.setPage(props.page + 1);
+    };
     
     return (
         <ConditionWrap>
@@ -49,7 +56,6 @@ function Condition(props) {
 
             <Content>
                 <h1>
-                    <span>2.</span>
                     What is the condition<br/> 
                     of the property?
                 </h1>
@@ -83,7 +89,7 @@ function Condition(props) {
                     <div className={props.condition === 4 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.condition === 4 ? 'text-active' : 'text-inactive'}>Very Bad</h3>
                 </Button>
-                <button className="nextStep" onClick={NextStep}>NEXT</button>
+                {/* <button className="nextStep" onClick={NextStep}>NEXT</button> */}
                 <ProgressBar page={props.page} />
                 <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>

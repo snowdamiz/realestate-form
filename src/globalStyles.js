@@ -4,12 +4,12 @@ import { fonts, colors, media } from './vars';
 export const Content = styled.section`
     width: 100%;
     // border: 1px solid blue;
-    margin-top: -40px;
+    margin-top: -65px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 140px;
 
     ${media.tablet} {
         margin-top: -80px;

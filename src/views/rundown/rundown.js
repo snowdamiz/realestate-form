@@ -74,7 +74,7 @@ function Rundown(props) {
 
             <Content>
                 <h1>
-                    <span>7.</span>Thank you for your<br/>
+                    Thank you for your<br/>
                     submission, here are<br />
                     your selections
                 </h1>

@@ -4,12 +4,13 @@ import { fonts, colors, media } from '../../vars';
 
 export const HeaderWrap = styled.section`
     width: 100%;
-    height: 170px;
+    height: 150px;
     background-color #fff;
     background-image: url('${Banner}');
     // background-size: cover;
     background-position: right;
     background-repeat: no-repeat;
+    border-top: 10px solid ${colors.primary};
 
     ${media.tablet} {
         height: 180px;
@@ -24,14 +25,14 @@ export const HeaderWrap = styled.section`
     }
 
     img {
-        width: 50px;
-        height: 50px;
+        width: 36px;
+        height: 36px;
         // border: 1px solid red;
         position: absolute;
         right: 0;
         top: 0;
-        margin-top: 30px;
-        margin-right: 30px;
+        margin-top: 20px;
+        margin-right: 20px;
         cursor: pointer;
 
         ${media.largeTablet} {

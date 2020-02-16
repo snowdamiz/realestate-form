@@ -119,7 +119,6 @@ function Contact(props) {
 
             <Content>
                 <h1>
-                    <span>6.</span>
                     Who should we contact?
                 </h1>
                 {contactError ? <div className="error">{contactError}</div> : null }
@@ -135,7 +134,6 @@ function Contact(props) {
                     placeholder="Email"
                     onChange={setEmail} />
                 <button className="submitBtn" onClick={submit}>SUBMIT</button>
-                {/* <button className="nextStep" onClick={NextStep}>NEXT</button> */}
                 <ProgressBar page={props.page} />
                 <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>

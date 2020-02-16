@@ -8,20 +8,27 @@ import Checkmark from '../../assets/checkmark.svg';
 function Timeline(props) {
     const [timelineError, setTimelineError] = useState(null);
 
-    const NextStep = () => {
-        if (props.timeline) {
-            props.setPage(props.page + 1);
-        } else {
-            setTimelineError("Please Make a Selection");
-        }
-    };
-
     const PrevStep = () => props.setPage(props.page - 1);
 
-    const setTimeline1 = () => props.setTimeline(1);
-    const setTimeline2 = () => props.setTimeline(2);
-    const setTimeline3 = () => props.setTimeline(3);
-    const setTimeline4 = () => props.setTimeline(4);
+    const setTimeline1 = () => {
+        props.setTimeline(1);
+        props.setPage(props.page + 1);
+    };
+    
+    const setTimeline2 = () => {
+        props.setTimeline(2);
+        props.setPage(props.page + 1);
+    };
+    
+    const setTimeline3 = () => {
+        props.setTimeline(3);
+        props.setPage(props.page + 1);
+    };
+    
+    const setTimeline4 = () => {
+        props.setTimeline(4);
+        props.setPage(props.page + 1);
+    };
 
     return (
         <TimelineWrap>
@@ -49,7 +56,6 @@ function Timeline(props) {
 
             <Content>
                 <h1>
-                    <span>4.</span>
                     How fast do you need<br/> 
                     to sell your property<br />
                     for cash?
@@ -84,7 +90,7 @@ function Timeline(props) {
                     <div className={props.timeline === 4 ? 'radio-active' : 'radio-inactive'}></div> */}
                     <h3 className={props.timeline === 4 ? 'text-active' : 'text-inactive'}>20 Business Days</h3>
                 </Button>
-                <button className="nextStep" onClick={NextStep}>NEXT</button>
+                {/* <button className="nextStep" onClick={NextStep}>NEXT</button> */}
                 <ProgressBar page={props.page} />
                 <button className="prevStep" onClick={PrevStep}>Go Back</button>
             </Content>
