@@ -74,21 +74,11 @@ export const Content = styled.section`
     .tyText {
         // margin-top: 20px;
         font-weight: 400;
-        font-size: 17px;
-        line-height: 19px;
+        font-size: 19px;
+        line-height: 22px;
         font-family: ${fonts.primary};
         color: ${colors.black};
         text-align: center;
-
-        ${media.phone} {
-            font-size: 19px;
-            line-height: 22px;
-        }
-
-        // ${media.tablet} {
-        //     font-size: 18px;
-        //     line-height: 21px;
-        // }
 
         ${media.largeTablet} {
             font-size: 19px;
