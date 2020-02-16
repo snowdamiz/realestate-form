@@ -73,7 +73,7 @@ function Rundown(props) {
                 setEmail={props.setEmail} />
 
             <Content>
-                <h1>
+                <h1 className="tyHeading">
                     All Done!<br/>
                 </h1>
                 <h2 className="tyText">

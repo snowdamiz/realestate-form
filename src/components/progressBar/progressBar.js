@@ -10,7 +10,7 @@ function ProgressBar(props) {
         if (props.page === 3) setPercent("40%");
         if (props.page === 4) setPercent("70%");
         if (props.page === 5) setPercent("90%");
-        if (props.page === 6) setPercent("100%");
+        if (props.page === 6) setPercent("95%");
     }, []);
 
     return (

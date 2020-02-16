@@ -51,6 +51,26 @@ export const Content = styled.section`
         }
     }
 
+    .tyHeading {
+        font-size: 24px;
+        color: ${colors.black};
+        font-family: ${fonts.primary};
+        text-align: center;
+        font-weight: 500;
+        line-height: 25px;
+
+        ${media.phone} {
+            font-size: 28px;
+            line-height: 27px;
+        }
+
+        ${media.tablet} {
+            font-size: 32px;
+            line-height: 32px;
+        }
+
+    }
+
     .tyText {
         // margin-top: 20px;
         font-weight: 400;
@@ -68,6 +88,11 @@ export const Content = styled.section`
         ${media.largeTablet} {
             font-size: 19px;
             line-height: 22px;
+        }
+
+        ${media.desktop} {
+            font-size: 20px;
+            line-height: 24px;
         }
     }
 
