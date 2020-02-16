@@ -12,22 +12,22 @@ function Type(props) {
 
     const setType1 = () => {
         props.setType(1);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 300);
     }
     
     const setType2 = () => {
         props.setType(2);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 300);
     }
 
     const setType3 = () => {
         props.setType(3);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 300);
     }
     
     const setType4 = () => {
         props.setType(4);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 300);
     }
 
     return (

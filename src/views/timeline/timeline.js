@@ -12,22 +12,22 @@ function Timeline(props) {
 
     const setTimeline1 = () => {
         props.setTimeline(1);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     const setTimeline2 = () => {
         props.setTimeline(2);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     const setTimeline3 = () => {
         props.setTimeline(3);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     const setTimeline4 = () => {
         props.setTimeline(4);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
 
     return (

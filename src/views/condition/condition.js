@@ -12,22 +12,22 @@ function Condition(props) {
 
     const setCondition1 = () => {
         props.setCondition(1);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     const setCondition2 = () => {
         props.setCondition(2);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     const setCondition3 = () => {
         props.setCondition(3);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     const setCondition4 = () => {
         props.setCondition(4);
-        props.setPage(props.page + 1);
+        setTimeout(() => props.setPage(props.page + 1), 500);
     };
     
     return (

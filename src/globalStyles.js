@@ -190,7 +190,7 @@ export const Content = styled.section`
     }
 
     .btn-active {
-        height: 54px;
+        height: 44px;
         background-color: ${colors.primary};
         box-shadow: 0 0 8px ${colors.shadow};
         border-radius: 10px;
@@ -202,7 +202,7 @@ export const Content = styled.section`
         cursor: pointer;
         border: 2px solid transparent;
         padding: 0 30px 0 0;
-        min-width: 180px;
+        min-width: 150px;
 
         ${media.phone} {
             height: 50px;
